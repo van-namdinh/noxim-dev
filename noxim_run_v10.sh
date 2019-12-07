@@ -16,12 +16,12 @@ export PROJECT_DIR=`pwd`
 rm -rf ${PROJECT_DIR}/tmpconfigv10/
 mkdir ${PROJECT_DIR}/tmpconfigv10/
 #Step 1: copy and create the individual config files from original source code
-for algos in XY YX DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
+for algos in XY DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
 do
 	cp ../config_examples/default_configMesh.yaml ${PROJECT_DIR}/tmpconfigv10/default_conf_${algos}.yaml
 done
 #Step 2: fix the algorithm
-for algos in XY YX DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
+for algos in XY DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
 do
 	sed s/routing_algorithm:\ TABLE_BASED/routing_algorithm:\ ${algos}/g \
 		${PROJECT_DIR}/tmpconfigv10/default_conf_${algos}.yaml > \
@@ -29,7 +29,7 @@ do
 done
 
 rm -r ${PROJECT_DIR}/temconfigv10/
-for algos in XY YX DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
+for algos in XY DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
 do
 	mkdir ${PROJECT_DIR}/temconfigv10
 	mkdir ${PROJECT_DIR}/${algos}_algoriv10

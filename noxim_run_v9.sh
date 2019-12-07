@@ -17,19 +17,19 @@ rm -rf ${PROJECT_DIR}/tmpconfigv9/
 mkdir ${PROJECT_DIR}/tmpconfigv9/
 rm -rf ${PROJECT_DIR}/temconfigfilesv9/
 #Step 1: copy and create the individual config files from original source code
-for algos in XY YX DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD	ODD_EVEN2
+for algos in XY DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
 do
 	cp ../config_examples/default_configMesh.yaml ${PROJECT_DIR}/tmpconfigv9/default_conf_${algos}.yaml
 done
 #Step 2: fix the algorithm
-for algos in XY YX DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD	ODD_EVEN2
+for algos in XY DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
 do
 	sed s/routing_algorithm:\ TABLE_BASED/routing_algorithm:\ ${algos}/g \
 		${PROJECT_DIR}/tmpconfigv9/default_conf_${algos}.yaml > \
 		${PROJECT_DIR}/tmpconfigv9/${algos}.yaml
 done
 
-for algos in XY YX DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD	ODD_EVEN2
+for algos in XY DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
 do
 #	rm -rf ${algos}*
 #	rm -rf *.dat

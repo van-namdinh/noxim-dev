@@ -16,7 +16,7 @@ export PROJECT_DIR=`pwd`
 rm -rf ${PROJECT_DIR}/tmpv8/
 mkdir ${PROJECT_DIR}/tmpv8/
 #Step 1: copy and create the individual config files from original source code
-for algos in XY YX DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
+for algos in XY DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
 do
 	cp ../config_examples/default_config.yaml \
 	   	${PROJECT_DIR}/tmpv8/default_conf_${algos}.yaml
@@ -30,7 +30,7 @@ do
 done
 
 rm -r ${PROJECT_DIR}/temconfigv8/
-for algos in XY YX DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
+for algos in XY DELTA WEST_FIRST NORTH_LAST NEGATIVE_FIRST ODD_EVEN DYAD
 do
 #	rm -rf ${algos}*
 #	rm -rf *.dat

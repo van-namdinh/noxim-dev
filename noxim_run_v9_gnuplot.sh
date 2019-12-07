@@ -1,4 +1,4 @@
-# -----------------------------------------------------------------------------
+##27ad81 -----------------------------------------------------------------------------
 # Project name   :
 # File name      : gnuplot_v8_latency.sh
 # Created date   : Th11 28 2019
@@ -19,8 +19,6 @@ set xrange [0:200]
 set ylabel "cycles"
 
 plot \
-   	"/home/vnd/WORK/noxim/bin/DELTA_algorithmv9/DELTA_results/outoffinal_DELTA_latency.dat" \
-  	title "DELTA" lt rgb "black", \
 	"/home/vnd/WORK/noxim/bin/DYAD_algorithmv9/DYAD_results/outoffinal_DYAD_latency.dat" \
   	title "DYAD" lt rgb "brown", \
 	"/home/vnd/WORK/noxim/bin/NEGATIVE_FIRST_algorithmv9/NEGATIVE_FIRST_results/outoffinal_NEGATIVE_FIRST_latency.dat" \
@@ -32,11 +30,7 @@ plot \
 	"/home/vnd/WORK/noxim/bin/WEST_FIRST_algorithmv9/WEST_FIRST_results/outoffinal_WEST_FIRST_latency.dat" \
   	title "WEST FIRST" lt rgb "green", \
 	"/home/vnd/WORK/noxim/bin/XY_algorithmv9/XY_results/outoffinal_XY_latency.dat" \
-  	title "XY" lt rgb "blue", \
-	"/home/vnd/WORK/noxim/bin/YX_algorithmv9/YX_results/outoffinal_YX_latency.dat" \
-  	title "YX" lt rgb "violet"
-	"/home/vnd/WORK/noxim/bin/ODD_EVEN2_algorithmv9/ODD_EVEN2_results/outoffinal_ODD_EVEN2_latency.dat" \
-  	title "ODD EVEN2" lt rgb "gray", \
+  	title "XY" lt rgb "blue" 
 
 #plot energy
 set term postscript eps color enhanced "" 24
@@ -47,8 +41,6 @@ set xrange [0:200]
 set ylabel "Total Power Energy (J)"
 
 plot \
-   	"/home/vnd/WORK/noxim/bin/DELTA_algorithmv9/DELTA_results/outoffinal_DELTA_energy.dat" \
-  	title "DELTA" lt rgb "black", \
 	"/home/vnd/WORK/noxim/bin/DYAD_algorithmv9/DYAD_results/outoffinal_DYAD_energy.dat" \
   	title "DYAD" lt rgb "brown", \
 	"/home/vnd/WORK/noxim/bin/NEGATIVE_FIRST_algorithmv9/NEGATIVE_FIRST_results/outoffinal_NEGATIVE_FIRST_energy.dat" \
@@ -60,12 +52,7 @@ plot \
 	"/home/vnd/WORK/noxim/bin/WEST_FIRST_algorithmv9/WEST_FIRST_results/outoffinal_WEST_FIRST_energy.dat" \
   	title "WEST FIRST" lt rgb "green", \
 	"/home/vnd/WORK/noxim/bin/XY_algorithmv9/XY_results/outoffinal_XY_energy.dat" \
-  	title "XY" lt rgb "blue", \
-	"/home/vnd/WORK/noxim/bin/YX_algorithmv9/YX_results/outoffinal_YX_energy.dat" \
-  	title "YX" lt rgb "violet"
-	"/home/vnd/WORK/noxim/bin/ODD_EVEN2_algorithmv9/ODD_EVEN2_results/outoffinal_ODD_EVEN2_energy.dat" \
-  	title "ODD EVEN2" lt rgb "gray", \
-
+  	title "XY" lt rgb "blue" 
 
 #plot throughput 
 set term postscript eps color enhanced "" 24
@@ -76,8 +63,6 @@ set xrange [0:200]
 set ylabel "Average Throughput"
 
 plot \
-   	"/home/vnd/WORK/noxim/bin/DELTA_algorithmv9/DELTA_results/outoffinal_DELTA_throughput.dat" \
-  	title "DELTA" lt rgb "black", \
 	"/home/vnd/WORK/noxim/bin/DYAD_algorithmv9/DYAD_results/outoffinal_DYAD_throughput.dat" \
   	title "DYAD" lt rgb "brown", \
 	"/home/vnd/WORK/noxim/bin/NEGATIVE_FIRST_algorithmv9/NEGATIVE_FIRST_results/outoffinal_NEGATIVE_FIRST_throughput.dat" \
@@ -89,11 +74,7 @@ plot \
 	"/home/vnd/WORK/noxim/bin/WEST_FIRST_algorithmv9/WEST_FIRST_results/outoffinal_WEST_FIRST_throughput.dat" \
   	title "WEST FIRST" lt rgb "green", \
 	"/home/vnd/WORK/noxim/bin/XY_algorithmv9/XY_results/outoffinal_XY_throughput.dat" \
-  	title "XY" lt rgb "blue", \
-	"/home/vnd/WORK/noxim/bin/YX_algorithmv9/YX_results/outoffinal_YX_throughput.dat" \
-  	title "YX" lt rgb "violet"
-	"/home/vnd/WORK/noxim/bin/ODD_EVEN2_algorithmv9/ODD_EVEN2_results/outoffinal_ODD_EVEN2_throughput.dat" \
-  	title "ODD EVEN2" lt rgb "gray", \
+  	title "XY" lt rgb "blue" 
 
 set key center ##legend placement
 quit
